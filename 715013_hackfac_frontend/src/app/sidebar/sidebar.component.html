@@ -1,0 +1,34 @@
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+     <p> 
+       <a mat-list-item routerLink="/dashboard" routerLinkActive="active-list-item" *ngIf="userRole == 'admins' || userRole == 'pmos' || userRole == 'pocs'">Dashboard</a>
+      </p>
+      <p>
+        <a mat-list-item routerLink="/report" routerLinkActive="active-list-item" *ngIf="userRole == 'admins'  || userRole == 'pmos'">Reports</a>
+        </p>
+        <p>
+      <a mat-list-item routerLink="/upload" routerLinkActive="active-list-item" *ngIf="userRole == 'admins'">download Xl</a></p>
+      <p>
+        <a mat-list-item routerLink="/event" routerLinkActive="active-list-item" *ngIf="userRole == 'pocs'">poc Report</a>
+      </p>
+      <p>
+        <a mat-list-item routerLink="/config" routerLinkActive="active-list-item" *ngIf="userRole == 'admins'">Config</a>
+      </p>
+      <p>
+        <a mat-list-item routerLink="/feedback" routerLinkActive="active-list-item" *ngIf="userRole == 'emps'">Feedback</a>
+      </p>
+      <p>
+        <a mat-list-item routerLink="/feedbacklist" routerLinkActive="active-list-item" *ngIf="userRole == 'admins'">Feedback List</a>
+      </p>
+      <p>
+        <a mat-list-item routerLink="/employee" routerLinkActive="active-list-item" *ngIf="userRole == 'admins'">Employee Sended Response</a>
+      </p>
+      <p>
+        <a mat-list-item routerLink="/employe" routerLinkActive="active-list-item" *ngIf="userRole == 'admins'">Employee Not Sended Response</a>
+      </p>
+    </mat-drawer>
+  <app-header></app-header>
+  <div class="example-sidenav-content">
+    <img src="../assets/images/collapse-menu.png" alt="Menu" (click)="drawer.toggle()" title="Toggle side Menu"/>
+  </div>
+

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    //background: url("assets/images/bg1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+        color: #000;
+    }
+    .overflow-hdn{
+        overflow: hidden;
+        min-height: 605px;
+    }

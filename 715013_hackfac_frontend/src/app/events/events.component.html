@@ -1,0 +1,20 @@
+
+<mat-drawer-container class="example-container" autosize>
+  <app-sidebar></app-sidebar>
+  <h2 class="rolebtn">Please Give the File Path</h2>
+  <div class="cus-width">
+      <mat-form-field class="example-full-width">
+          <input matInput  placeholder="emp_no" [(ngModel)]="path">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input matInput required placeholder="file path" [(ngModel)]="reportEmpId">
+      </mat-form-field>
+
+      <div class="cus-width">
+          <button md-raised-button color="primary" (click)="generateReport()">Submit</button>
+      </div>
+      <mat-form-field class="example-full-width">
+          <input matInput required placeholder="output File Path" [(ngModel)]="OUTPUT_PATH">
+      </mat-form-field>
+  </div>
+  </mat-drawer-container>

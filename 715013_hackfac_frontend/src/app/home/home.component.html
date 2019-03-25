@@ -1,0 +1,23 @@
+<div class="container overflow-hdn">
+    <form novalidate class="login-form" action="" name="loginForm" autocomplete="off" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+  <div class="row">
+    <mat-form-field class="example-full-width">
+      <input matInput required placeholder="User Name" aria-describedby="username" formControlName="username">
+      <mat-error *ngIf="loginForm.get('username').hasError('required')"> User Name is required</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="example-full-width">
+      <input matInput required placeholder="Password" aria-describedby="password" formControlName="password">
+      <mat-error *ngIf="loginForm.get('password').hasError('required')"> Password is required</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <button type="submit" mat-raised-button >LOG IN</button>
+  </div>
+</form>
+</div>
+
+ 
+
+  

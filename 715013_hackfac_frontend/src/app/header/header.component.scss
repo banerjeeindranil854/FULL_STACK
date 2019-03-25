@@ -1,0 +1,10 @@
+.full-width{
+    width: 100%;
+    .user-info{
+        float: right;
+        display: -webkit-box;
+        img{
+            width: 40px;
+        }
+    }
+}

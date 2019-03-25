@@ -1,0 +1,18 @@
+<mat-drawer-container class="example-container" autosize>
+  <app-sidebar></app-sidebar>
+  <div class="upload-div">
+    <div class="row col-md-12">
+      <div class="col-md-7">
+        <h4>Please Give the File Path</h4>
+        <mat-form-field>
+          <input matInput required placeholder="File Path" [(ngModel)]="filePath">
+          <input matInput required placeholder="File Path" [(ngModel)]="OUTPUT_PATH">
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="row col-md-12">
+      <button md-raised-button color="primary" (click)="xlSubmit();">Submit</button>
+    </div>
+  </div>
+</mat-drawer-container>

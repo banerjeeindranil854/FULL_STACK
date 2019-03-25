@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Give Your Feedback</h4>
+      </div>
+      <div class="col-md-12">
+          <div class="feedback-section" (click)="feedbackSelected(1);" [ngClass]="{'selected': feedbackVal == 1}">
+              <img src="../assets/images/verypoor.png" alt="verypoor"/>
+              <p>Very Poor</p>
+            </div>
+            <div class="feedback-section" (click)="feedbackSelected(2);" [ngClass]="{'selected': feedbackVal == 2}">
+                <img src="../assets/images/poor.png" alt="poor"/>
+                <p>Poor</p>
+              </div>
+              <div class="feedback-section" (click)="feedbackSelected(3);" [ngClass]="{'selected': feedbackVal == 3}">
+                  <img src="../assets/images/average.png" alt="average"/>
+                  <p>Average</p>
+                </div>
+                <div class="feedback-section" (click)="feedbackSelected(4);" [ngClass]="{'selected': feedbackVal == 4}">
+                    <img src="../assets/images/good.png" alt="good"/>
+                    <p>Good</p>
+                  </div>
+    <div class="feedback-section" (click)="feedbackSelected(5);" [ngClass]="{'selected': feedbackVal == 5}">
+      <img src="../assets/images/excellent.png" alt="excellent"/>
+      <p>Excellent</p>
+    </div>        
+              </div>
+  </div>
+  <div class="row col-md-12 margtop30" *ngIf="isComment">
+      <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Leave a comment" [(ngModel)]="description"></textarea>
+        </mat-form-field>
+    </div>
+    <div class="row col-md-12">
+        <button mat-raised-button color="primary" (click)="feedbackSubmit();">Submit</button>
+    </div>
+  </div>
